@@ -1,22 +1,73 @@
-<!doctype html>
-<html lang="en">
+---
+export const prerender = true;
+import "../styles/global.css";
+
+const navItems = [
+	{ label: "Inicio", href: "#inicio" },
+	{ label: "Nosotros", href: "#nosotros" },
+	{ label: "Catálogo", href: "#catalogo" },
+	{ label: "Contacto", href: "#contacto" },
+];
+---
+
+<html lang="es">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Productos del Campo</title>
+		<link rel="icon" type="image/png" href="/logo.png" />
 	</head>
-	<body>
-		<slot />
+	<body class="bg-white text-gray-800">
+		<header class="w-full bg-green-700 text-white">
+			<div
+				class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center flex-wrap"
+			>
+				<div class="flex items-center space-x-3">
+					<img src="/logo.png" alt="Logo" class="h-10 w-10" />
+				</div>
+				<nav class="flex flex-wrap gap-4 mt-2 sm:mt-0">
+					{
+						navItems.map((item) => (
+							<a href={item.href} class="hover:text-green-300 transition">
+								{item.label}
+							</a>
+						))
+					}
+				</nav>
+			</div>
+		</header>
+
+		<main class="w-full">
+			<div class="max-w-7xl mx-auto p-6">
+				<slot />
+			</div>
+		</main>
+
+		<footer class="bg-green-800 text-white p-6 w-full">
+			<div
+				class="mx-auto max-w-7xl grid grid-cols-1 md:grid-cols-2 gap-4 items-start"
+			>
+				<div class="text-center md:text-left md:flex md:justify-center">
+					<div>
+						<h4 class="text-lg font-semibold mb-4">Información</h4>
+						<p>📍 Almacén Sony 3 1/2 c al este. Estelí</p>
+						<p>📧 zb.juanjose@gmail.com</p>
+						<p>☎️ +505 8508 - 8302</p>
+					</div>
+				</div>
+
+				<div class="text-center md:text-left md:flex md:justify-center">
+					<div>
+						<h4 class="text-lg font-semibold mb-4">Redes Sociales</h4>
+						<a href="https://walink.co/63a950" class="hover:text-green-300"
+							>❇️ Whatsapp</a
+						><br />
+					</div>
+				</div>
+			</div>
+			<div class="mt-8 text-center">
+				<p>&copy; 2025 Productos del Campo - Todos los derechos reservados.</p>
+			</div>
+		</footer>
 	</body>
 </html>
-
-<style>
-	html,
-	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
-	}
-</style>

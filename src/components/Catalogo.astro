@@ -1,0 +1,42 @@
+---
+const productos = [
+  {
+    nombre: "Tomates",
+    imagen: "/images/tomates.jpg",
+    descripcion: "Tomates frescos y jugosos.",
+  },
+  {
+    nombre: "Lechuga",
+    imagen: "/images/lechuga.jpg",
+    descripcion: "Lechuga crujiente y fresca.",
+  },
+  {
+    nombre: "Zanahorias",
+    imagen: "/images/zanahorias.jpg",
+    descripcion: "Zanahorias dulces y nutritivas.",
+  },
+];
+---
+
+<section class="py-10" id="catalogo">
+  <h2 class="text-3xl font-bold text-green-700 text-center">
+    Nuestro Catálogo
+  </h2>
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6">
+    {
+      productos.map((producto) => (
+        <div class="border p-4 rounded-lg shadow-lg bg-white">
+          <img
+            src={producto.imagen}
+            alt={producto.nombre}
+            class="rounded-md w-full h-40 object-cover"
+          />
+          <h3 class="text-xl font-semibold text-green-600 mt-4">
+            {producto.nombre}
+          </h3>
+          <p class="text-gray-700">{producto.descripcion}</p>
+        </div>
+      ))
+    }
+  </div>
+</section>
