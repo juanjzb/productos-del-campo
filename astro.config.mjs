@@ -4,6 +4,8 @@ import path from 'path'
 
 export default defineConfig({
   output: 'static',
+  site: 'https:/https://juanjzb.github.io/',
+  base: 'productos - del - campo',
   vite: {
     plugins: [tailwindcss()],
     resolve: {
