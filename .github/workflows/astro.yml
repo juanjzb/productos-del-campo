@@ -61,6 +61,12 @@ jobs:
         with:
           version: 8 # Or your desired pnpm version
           run_install: false #install will be done later.
+      - name: Check pnpm version
+        if: steps.detect-package-manager.outputs.manager == 'pnpm'
+        run: pnpm --version
+      - name: Print PATH
+        if: steps.detect-package-manager.outputs.manager == 'pnpm'
+        run: echo $PATH
       - name: Cache pnpm modules
         if: steps.detect-package-manager.outputs.manager == 'pnpm'
         uses: actions/cache@v3
