@@ -2,6 +2,15 @@
 export const prerender = true;
 import "@styles/global.css";
 
+import location from "@assets/icons/location.png";
+import mail from "@assets/icons/mail.png";
+import telephone from "@assets/icons/telephone.png";
+import whatsapp from "@assets/icons/whatsapp.png";
+import facebook from "@assets/icons/facebook.png";
+import instagram from "@assets/icons/instagram.png";
+import twitter from "@assets/icons/twitter.png";
+import linkedin from "@assets/icons/linkedin.png";
+
 const navItems = [
 	{ label: "Inicio", href: "#inicio" },
 	{ label: "Nosotros", href: "#nosotros" },
@@ -23,11 +32,13 @@ const navItems = [
 				class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center flex-wrap"
 			>
 				<div class="flex items-center space-x-3">
-					<img
-						src="/productos-del-campo/logo.png"
-						alt="Logo"
-						class="h-10 w-10"
-					/>
+					<a href="#">
+						<img
+							src="/productos-del-campo/logo.png"
+							alt="Logo"
+							class="h-10 w-10"
+						/>
+					</a>
 				</div>
 				<nav class="flex flex-wrap gap-4 mt-2 sm:mt-0">
 					{
@@ -54,18 +65,58 @@ const navItems = [
 				<div class="text-center md:text-left md:flex md:justify-center">
 					<div>
 						<h4 class="text-lg font-semibold mb-4">Información</h4>
-						<p>📍 Almacén Sony 3 1/2 c al este. Estelí</p>
-						<p>📧 zb.juanjose@gmail.com</p>
-						<p>☎️ +505 8508 - 8302</p>
+						<Fragment>
+							<img src=`${location.src}` class="inline h-4 w-4" />
+							<p class="inline">
+								Almacén Sony 3 1 2 c al este. Estelí
+							</p></Fragment
+						><br />
+						<Fragment>
+							<img src=`${mail.src}` class="inline h-4 w-4" />
+							<p class="inline">
+								<a href="mailto:zb.juanjose@gmail.com" target="_blank"
+									>zb.juanjose@gmail.com</a
+								>
+							</p>
+						</Fragment><br />
+						<Fragment>
+							<img src=`${telephone.src}` class="inline h-4 w-4" />
+							<p class="inline">
+								<a href="tel:+50585088302" target="_blank">Claro: 8508 8302</a> /
+								<a href="tel:+50576889649" target="_blank">Tigo: 7688 9649</a>
+							</p>
+						</Fragment><br />
+
+						<Fragment>
+							<img src=`${whatsapp.src}` class="inline h-4 w-4" />
+							<p class="inline">
+								<a href="https://wa.me/+50585088302" target="_blank"
+									>Claro: 8508 8302</a
+								> /
+								<a href="https://wa.me/+50576889649" target="_blank"
+									>Tigo: 7688 9649</a
+								>
+							</p>
+						</Fragment>
 					</div>
 				</div>
 
 				<div class="text-center md:text-left md:flex md:justify-center">
 					<div>
 						<h4 class="text-lg font-semibold mb-4">Redes Sociales</h4>
-						<a href="https://walink.co/63a950" class="hover:text-green-300"
-							>❇️ Whatsapp</a
-						><br />
+						<div class="gap-1 flex">
+							<a href="https://wa.me/+50585088302" target="_blank"
+								><img src=`${facebook.src}` class="inline h-8 w-8" /></a
+							><a href="https://wa.me/+50585088302" target="_blank"
+								><img src=`${instagram.src}` class="inline h-8 w-8" /></a
+							><a href="https://wa.me/+50585088302" target="_blank"
+								><img src=`${twitter.src}` class="inline h-8 w-8" /></a
+							><a href="https://wa.me/+50585088302" target="_blank"
+								><img src=`${linkedin.src}` class="inline h-8 w-8" /></a
+							>
+						</div>
+
+						<br />
 					</div>
 				</div>
 			</div>
