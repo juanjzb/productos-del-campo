@@ -13,7 +13,8 @@ export default defineConfig({
         '@layouts': path.resolve('./src/layouts'),
         '@assets': path.resolve('./src/assets'),
         '@components': path.resolve('./src/components'),
-        '@styles': path.resolve('./src/styles')
+        '@styles': path.resolve('./src/styles'),
+        '@data': path.resolve('./src/data')
       }
     }
   }

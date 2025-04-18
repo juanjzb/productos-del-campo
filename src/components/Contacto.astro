@@ -5,20 +5,38 @@
     formulario.
   </p>
 
-  <form class="mt-6 bg-white p-6 rounded-lg shadow-lg max-w-lg mx-auto">
+  <form
+    class="mt-6 bg-white p-6 rounded-lg shadow-lg max-w-lg mx-auto"
+    method="POST"
+    action="/api/send-email"
+  >
     <label class="block text-green-700 font-semibold">Nombre:</label>
-    <input type="text" class="w-full border rounded p-2 mt-2" />
+    <input
+      type="text"
+      class="w-full border rounded p-2 mt-2"
+      name="name"
+      required
+    />
 
     <label class="block text-green-700 font-semibold mt-4"
       >Correo Electrónico:</label
     >
-    <input type="email" class="w-full border rounded p-2 mt-2" />
+    <input
+      type="email"
+      class="w-full border rounded p-2 mt-2"
+      name="email"
+      required
+    />
 
     <label class="block text-green-700 font-semibold mt-4">Mensaje:</label>
-    <textarea class="w-full border rounded p-2 mt-2"></textarea>
+    <textarea class="w-full border rounded p-2 mt-2" name="message" required
+    ></textarea>
 
-    <button type="submit" class="mt-4 bg-green-600 text-white px-4 py-2 rounded"
-      >Enviar</button
+    <button
+      type="submit"
+      class="mt-4 bg-green-600 text-white px-4 py-2 rounded"
     >
+      Enviar
+    </button>
   </form>
 </section>
