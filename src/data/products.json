@@ -1,0 +1,22 @@
+[
+  {
+    "nombre": "Dulce de Panela",
+    "imagen": "dulce.jpeg",
+    "descripcion": "Dulce de Panela"
+  },
+  {
+    "nombre": "Limon Tahiti",
+    "imagen": "tahiti.jpg",
+    "descripcion": "Limones Frescos"
+  },
+  {
+    "nombre": "Yuca",
+    "imagen": "yuca.jpeg",
+    "descripcion": "Yuca Fresca"
+  },
+  {
+    "nombre": "Naranjas",
+    "imagen": "naranjas.jpg",
+    "descripcion": "Naranjas Frescas"
+  }
+]
